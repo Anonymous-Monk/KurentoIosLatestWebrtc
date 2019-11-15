@@ -18,7 +18,8 @@
 #import <Foundation/Foundation.h>
 
 #import "NBMTypes.h"
-#import <WebRTC/RTCPeerConnection.h>
+#import "WebRTC/RTCPeerConnection.h"
+#import "WebRTC/RTCCameraVideoCapturer.h"
 
 @class NBMWebRTCPeer;
 @class NBMMediaConfiguration;
@@ -78,6 +79,8 @@
  *  @param connection   The connection related to the stream.
  */
 - (void)webRTCPeer:(NBMWebRTCPeer *)peer didAddStream:(RTCMediaStream *)remoteStream ofConnection:(NBMPeerConnection *)connection;
+
+- (void)webRTCPeer:(NBMWebRTCPeer *)peer didCreateLocalCapturer:(RTCCameraVideoCapturer *) capturer;
 
 /**
  *  Called when a remote peer close a stream.

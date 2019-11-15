@@ -76,8 +76,15 @@
 		4AE8C9EC1C4FD83300A87D8A /* NBMTreeClientError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8C9EA1C4FD83200A87D8A /* NBMTreeClientError.m */; };
 		4AE8C9ED1C514DB300A87D8A /* NBMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6E88D91C0F0068000A8EE9 /* NBMTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AF48D611BECEFFA004E4AD2 /* KurentoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A46BC211BE3DF79009E0FBE /* KurentoToolbox.framework */; };
-		564D8A0B1D18485500676AAC /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D8A0A1D18485500676AAC /* WebRTC.framework */; };
+		4D1677032376B4FF003CEF57 /* NBMCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1676FC2376B4FE003CEF57 /* NBMCaptureController.m */; };
+		4D1677042376B4FF003CEF57 /* NBMSettingsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1676FD2376B4FF003CEF57 /* NBMSettingsModel.h */; };
+		4D1677052376B4FF003CEF57 /* NBMSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1676FE2376B4FF003CEF57 /* NBMSettingsStore.m */; };
+		4D1677062376B4FF003CEF57 /* NBMCaptureController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1676FF2376B4FF003CEF57 /* NBMCaptureController.h */; };
+		4D1677072376B4FF003CEF57 /* NBMSettingsModel+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1677002376B4FF003CEF57 /* NBMSettingsModel+Private.h */; };
+		4D1677082376B4FF003CEF57 /* NBMSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1677012376B4FF003CEF57 /* NBMSettingsModel.m */; };
+		4D1677092376B4FF003CEF57 /* NBMSettingsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1677022376B4FF003CEF57 /* NBMSettingsStore.h */; };
 		564D8A141D1942C300676AAC /* libPods-KurentoToolbox-Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D8A131D1942C300676AAC /* libPods-KurentoToolbox-Static.a */; };
+		906DAEC72978BBC1459132C9 /* libPods-KurentoToolbox-Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A44AD8017DB368676764B11 /* libPods-KurentoToolbox-Static.a */; };
 		CF748A736A49BD58460593DD /* libPods-KurentoToolbox-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDE223912EC939E9DA6EBE1 /* libPods-KurentoToolbox-Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -93,10 +100,10 @@
 
 /* Begin PBXFileReference section */
 		4A0C9E891BD8DFCE00F4F7F0 /* NBMJSONRPCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NBMJSONRPCConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		4A133A4F1BE1204A0095B168 /* KurentoToolbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KurentoToolbox.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4A133A4F1BE1204A0095B168 /* KurentoToolbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KurentoToolbox.h; sourceTree = "<group>"; };
 		4A29E1711C5A0FD70068FEE5 /* NBMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NBMError.h; sourceTree = "<group>"; };
 		4A29E1721C5A0FD70068FEE5 /* NBMError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NBMError.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		4A29E1751C5A13D30068FEE5 /* WebRTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WebRTC.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4A29E1751C5A13D30068FEE5 /* WebRTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WebRTC.h; sourceTree = "<group>"; };
 		4A29E1781C5A31AE0068FEE5 /* JSON-RPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "JSON-RPC.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4A29E17A1C5A339D0068FEE5 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		4A29E17C1C5A33E50068FEE5 /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tree.h; path = Tree/Tree.h; sourceTree = "<group>"; };
@@ -171,10 +178,18 @@
 		4AE8C9EA1C4FD83200A87D8A /* NBMTreeClientError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBMTreeClientError.m; path = Tree/Internals/NBMTreeClientError.m; sourceTree = "<group>"; };
 		4AF48D5C1BECEFFA004E4AD2 /* KurentoToolbox-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KurentoToolbox-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF48D601BECEFFA004E4AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		564D8A0A1D18485500676AAC /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
+		4D1676FC2376B4FE003CEF57 /* NBMCaptureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMCaptureController.m; sourceTree = "<group>"; };
+		4D1676FD2376B4FF003CEF57 /* NBMSettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMSettingsModel.h; sourceTree = "<group>"; };
+		4D1676FE2376B4FF003CEF57 /* NBMSettingsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMSettingsStore.m; sourceTree = "<group>"; };
+		4D1676FF2376B4FF003CEF57 /* NBMCaptureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMCaptureController.h; sourceTree = "<group>"; };
+		4D1677002376B4FF003CEF57 /* NBMSettingsModel+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NBMSettingsModel+Private.h"; sourceTree = "<group>"; };
+		4D1677012376B4FF003CEF57 /* NBMSettingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBMSettingsModel.m; sourceTree = "<group>"; };
+		4D1677022376B4FF003CEF57 /* NBMSettingsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBMSettingsStore.h; sourceTree = "<group>"; };
 		564D8A131D1942C300676AAC /* libPods-KurentoToolbox-Static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-KurentoToolbox-Static.a"; path = "Pods/../build/Debug-iphoneos/libPods-KurentoToolbox-Static.a"; sourceTree = "<group>"; };
 		7BDE223912EC939E9DA6EBE1 /* libPods-KurentoToolbox-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KurentoToolbox-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CF37E20A6732B0B0F77FAF /* Pods-KurentoToolbox-Static.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurentoToolbox-Static.release.xcconfig"; path = "Pods/Target Support Files/Pods-KurentoToolbox-Static/Pods-KurentoToolbox-Static.release.xcconfig"; sourceTree = "<group>"; };
 		8A44AD8017DB368676764B11 /* libPods-KurentoToolbox-Static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KurentoToolbox-Static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12150DDAE525A3594636BC8 /* Pods-KurentoToolbox-Static.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurentoToolbox-Static.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KurentoToolbox-Static/Pods-KurentoToolbox-Static.debug.xcconfig"; sourceTree = "<group>"; };
 		D0C7C1936F109C5D3E1CFA64 /* Pods-KurentoToolbox-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurentoToolbox-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KurentoToolbox-Tests/Pods-KurentoToolbox-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0644359EAD1857DA6D37FA /* Pods-KurentoToolbox-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurentoToolbox-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KurentoToolbox-Tests/Pods-KurentoToolbox-Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,10 +199,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564D8A0B1D18485500676AAC /* WebRTC.framework in Frameworks */,
 				4A6E88DF1C105435000A8EE9 /* UIKit.framework in Frameworks */,
 				4A6E88DD1C10542D000A8EE9 /* Foundation.framework in Frameworks */,
 				564D8A141D1942C300676AAC /* libPods-KurentoToolbox-Static.a in Frameworks */,
+				906DAEC72978BBC1459132C9 /* libPods-KurentoToolbox-Static.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +311,13 @@
 		4A6E88DB1C0F338F000A8EE9 /* WebRTC */ = {
 			isa = PBXGroup;
 			children = (
+				4D1676FF2376B4FF003CEF57 /* NBMCaptureController.h */,
+				4D1676FC2376B4FE003CEF57 /* NBMCaptureController.m */,
+				4D1676FD2376B4FF003CEF57 /* NBMSettingsModel.h */,
+				4D1677012376B4FF003CEF57 /* NBMSettingsModel.m */,
+				4D1677002376B4FF003CEF57 /* NBMSettingsModel+Private.h */,
+				4D1677022376B4FF003CEF57 /* NBMSettingsStore.h */,
+				4D1676FE2376B4FF003CEF57 /* NBMSettingsStore.m */,
 				4A29E1751C5A13D30068FEE5 /* WebRTC.h */,
 				4A6E88D71C0EFC2D000A8EE9 /* NBMRenderer.h */,
 				4A6E88D91C0F0068000A8EE9 /* NBMTypes.h */,
@@ -383,6 +405,8 @@
 			children = (
 				D0C7C1936F109C5D3E1CFA64 /* Pods-KurentoToolbox-Tests.debug.xcconfig */,
 				FC0644359EAD1857DA6D37FA /* Pods-KurentoToolbox-Tests.release.xcconfig */,
+				A12150DDAE525A3594636BC8 /* Pods-KurentoToolbox-Static.debug.xcconfig */,
+				89CF37E20A6732B0B0F77FAF /* Pods-KurentoToolbox-Static.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -391,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				564D8A131D1942C300676AAC /* libPods-KurentoToolbox-Static.a */,
-				564D8A0A1D18485500676AAC /* WebRTC.framework */,
 				4A4F0C8F1C158B5300CD30A1 /* CoreMedia.framework */,
 				4A6E88DE1C105435000A8EE9 /* UIKit.framework */,
 				4A6E88DC1C10542D000A8EE9 /* Foundation.framework */,
@@ -411,16 +434,19 @@
 				4A46BC501BE3E2E5009E0FBE /* KurentoToolbox.h in Headers */,
 				4A46BC3F1BE3E2B2009E0FBE /* NBMJSONRPCConstants.h in Headers */,
 				4A46BC3D1BE3E2A8009E0FBE /* NBMWebRTCPeer.h in Headers */,
+				4D1677092376B4FF003CEF57 /* NBMSettingsStore.h in Headers */,
 				4A46BC421BE3E2BD009E0FBE /* NBMRequest.h in Headers */,
 				4A4F0CA91C18384C00CD30A1 /* NBMRoomClientDelegate.h in Headers */,
 				4A6E88E21C105657000A8EE9 /* NBMRoomClient.h in Headers */,
 				4A46BC451BE3E2C6009E0FBE /* NBMResponse.h in Headers */,
 				4A29E1731C5A0FD70068FEE5 /* NBMError.h in Headers */,
 				4A46BC401BE3E2B6009E0FBE /* NBMMessage.h in Headers */,
+				4D1677062376B4FF003CEF57 /* NBMCaptureController.h in Headers */,
 				4A46BC471BE3E2CD009E0FBE /* NBMJSONRPCClient.h in Headers */,
 				4A6E88E61C10629F000A8EE9 /* NBMRoom.h in Headers */,
 				4A46BC3B1BE3E2A1009E0FBE /* NBMPeerConnection.h in Headers */,
 				4A4F0CAF1C201E3600CD30A1 /* NBMRoomClientError.h in Headers */,
+				4D1677042376B4FF003CEF57 /* NBMSettingsModel.h in Headers */,
 				4AE8C9E81C4E780B00A87D8A /* NBMTreeClientDelegate.h in Headers */,
 				4AE8C9ED1C514DB300A87D8A /* NBMTypes.h in Headers */,
 				4AE8C9CA1C47B83700A87D8A /* NBMEAGLVideoViewContainer.h in Headers */,
@@ -443,6 +469,7 @@
 				4A4F0C9F1C15CF8300CD30A1 /* NBMJSONRPCError.h in Headers */,
 				4A6E88EA1C10637B000A8EE9 /* NBMPeer.h in Headers */,
 				4AE439001BF4ABD1001882E5 /* NBMSessionDescriptionFactory.h in Headers */,
+				4D1677072376B4FF003CEF57 /* NBMSettingsModel+Private.h in Headers */,
 				4A2FE7281C74C25B00EF198F /* RTCMediaStream+Configuration.h in Headers */,
 				4A29E1791C5A31AE0068FEE5 /* JSON-RPC.h in Headers */,
 				4A29E17D1C5A33E50068FEE5 /* Tree.h in Headers */,
@@ -464,7 +491,6 @@
 				4A46BC1E1BE3DF79009E0FBE /* Headers */,
 				4A46BC1F1BE3DF79009E0FBE /* Resources */,
 				4AE438FC1BF49EEE001882E5 /* Appledoc */,
-				00B7B1E4654ECEB222B83919 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -483,8 +509,6 @@
 				4AF48D581BECEFFA004E4AD2 /* Sources */,
 				4AF48D591BECEFFA004E4AD2 /* Frameworks */,
 				4AF48D5A1BECEFFA004E4AD2 /* Resources */,
-				FA93102E05645A386114EAA3 /* [CP] Embed Pods Frameworks */,
-				ADD11EE09D6B269C6D8D3071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -519,6 +543,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -551,21 +576,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00B7B1E4654ECEB222B83919 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KurentoToolbox-Static/Pods-KurentoToolbox-Static-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4AE438FC1BF49EEE001882E5 /* Appledoc */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,34 +590,22 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ ${CONFIGURATION} == \"Release\" ]; then\nAPPLEDOC_PATH=`which appledoc`\nif [ $APPLEDOC_PATH ]; then\n$APPLEDOC_PATH \\\n--project-name ${PRODUCT_NAME} \\\n--project-company \"Nubomedia TI\" \\\n--company-id \"it.nubomedia\" \\\n--output \"docs/\" \\\n--no-create-docset \\\n--logformat xcode \\\n--docset-platform-family iphoneos \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--explicit-crossref \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n--ignore \"Internals\" \\\n--ignore \"Utils\" \\\n\"${PROJECT_DIR}/Classes\"\nfi;\nfi";
 		};
-		ADD11EE09D6B269C6D8D3071 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KurentoToolbox-Tests/Pods-KurentoToolbox-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D51A72AC073F02FF081D9157 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KurentoToolbox-Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7127162DBD1234157B2592C /* [CP] Check Pods Manifest.lock */ = {
@@ -616,28 +614,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KurentoToolbox-Static-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FA93102E05645A386114EAA3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KurentoToolbox-Tests/Pods-KurentoToolbox-Tests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -647,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1677082376B4FF003CEF57 /* NBMSettingsModel.m in Sources */,
 				4A46BC3E1BE3E2AC009E0FBE /* NBMWebRTCPeer.m in Sources */,
 				4A4F0CB01C201E3600CD30A1 /* NBMRoomClientError.m in Sources */,
 				4AE8C9E61C4E752900A87D8A /* NBMTreeEndpoint.m in Sources */,
@@ -654,6 +641,7 @@
 				4A6E88E31C105657000A8EE9 /* NBMRoomClient.m in Sources */,
 				4A4F0CA01C15CF8300CD30A1 /* NBMJSONRPCError.m in Sources */,
 				4AE8C9CB1C47B83700A87D8A /* NBMEAGLVideoViewContainer.m in Sources */,
+				4D1677032376B4FF003CEF57 /* NBMCaptureController.m in Sources */,
 				4A4F0CA61C15D0DC00CD30A1 /* NBMJSONRPCConstants.m in Sources */,
 				4A4F0CB41C2025E900CD30A1 /* NBMJSONRPCClientError.m in Sources */,
 				4A46BC431BE3E2C1009E0FBE /* NBMRequest.m in Sources */,
@@ -662,6 +650,7 @@
 				4A3BBFFB1C0CA34E00D9887F /* NBMMediaConfiguration.m in Sources */,
 				4A46BC481BE3E2D1009E0FBE /* NBMJSONRPCClient.m in Sources */,
 				4A6E88E71C10629F000A8EE9 /* NBMRoom.m in Sources */,
+				4D1677052376B4FF003CEF57 /* NBMSettingsStore.m in Sources */,
 				4AE439091BF4AC14001882E5 /* NBMTimeoutable.m in Sources */,
 				4A46BC3C1BE3E2A5009E0FBE /* NBMPeerConnection.m in Sources */,
 				4AD22D231C643313002C1038 /* RTCMediaStream+Configuration.m in Sources */,
@@ -699,7 +688,10 @@
 			baseConfigurationReference = 4A46BC511BE3E691009E0FBE /* Kurento-Library-Debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/**",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Framework/Kurento-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,7 +714,10 @@
 			baseConfigurationReference = 4A46BC521BE3E6A9009E0FBE /* Kurento-Library-Release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/**",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Framework/Kurento-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -731,6 +726,7 @@
 					"\"${PODS_ROOT}/Headers/Public/KurentoToolbox\"",
 					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
 					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"/Users/arikhalperin/repos/webrtc/Kurento-iOS/Pods/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework/Headers/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -829,6 +825,19 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/DGActivityIndicatorView\"",
+					"\"${PODS_ROOT}/Headers/Public/KurentoToolbox\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"/Users/arikhalperin/repos/webrtc/Kurento-iOS/Pods/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework/Headers",
+				);
 				INFOPLIST_FILE = KurentoToolboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mr.KurentoToolboxTests;
@@ -842,6 +851,19 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"\"${PODS_ROOT}/Headers/Public/DGActivityIndicatorView\"",
+					"\"${PODS_ROOT}/Headers/Public/KurentoToolbox\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
+					"\"${PODS_ROOT}/Headers/Public/SocketRocket\"",
+					"/Users/arikhalperin/repos/webrtc/Kurento-iOS/Pods/GoogleWebRTC/Frameworks/frameworks/WebRTC.framework/Headers",
+				);
 				INFOPLIST_FILE = KurentoToolboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mr.KurentoToolboxTests;

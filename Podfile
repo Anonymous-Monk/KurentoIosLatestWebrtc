@@ -1,7 +1,7 @@
 source 'https://github.com/artsy/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 workspace 'Kurento-iOS'
 
@@ -30,6 +30,7 @@ target 'KurentoToolboxDemo' do
     pod 'Reachability', '~> 3.2'
     pod 'DGActivityIndicatorView'
     pod 'Masonry', '~> 0.6.4'
+    pod 'GoogleWebRTC'
 end
 
 

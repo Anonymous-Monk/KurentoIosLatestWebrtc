@@ -36,12 +36,18 @@
 #import <WebRTC/RTCSessionDescription.h>
 #import <WebRTC/RTCVideoTrack.h>
 #import <WebRTC/RTCAudioTrack.h>
-#import <WebRTC/RTCAVFoundationVideoSource.h>
 #import <WebRTC/RTCDataChannelConfiguration.h>
 #import <WebRTC/RTCDataChannel.h>
+#import <WebRTC/RTCCameraVideoCapturer.h>
+#import <WebRTC/RTCFileVideoCapturer.h>
+#import <WebRTC/RTCCameraVideoCapturer.h>
+
+static NSString * const kARDVideoTrackId = @"ARDAMSv0";
 
 typedef void(^SdpOfferBlock)(NSString *sdpOffer, NBMPeerConnection *connection);
-static NSString *kDefaultSTUNServerUrl = @"stun:stun.l.google.com:19302";
+//static NSString *kDefaultSTUNServerUrl = @"stun:stun.l.google.com:19302";
+static NSString *kDefaultSTUNServerUrl = @"stun:199.203.238.169:3478";
+
 
 @interface NBMWebRTCPeer () <RTCPeerConnectionDelegate, RTCDataChannelDelegate>
 
@@ -462,18 +468,22 @@ didReceiveMessageWithBuffer:(RTCDataBuffer *)buffer {
 }
 
 - (RTCVideoTrack *)localVideoTrackWithConstraints:(RTCMediaConstraints *)videoConstraints {
-    NSString *cameraId = [self cameraDevice:self.cameraPosition];
     
-    NSAssert(cameraId, @"Unable to get camera id");
+    RTCVideoSource * source = [self.peerConnectionFactory videoSource];
     
-    RTCAVFoundationVideoSource* videoSource = [self.peerConnectionFactory avFoundationVideoSourceWithConstraints:videoConstraints];
-    if (self.cameraPosition == NBMCameraPositionBack) {
-        [videoSource setUseBackCamera:YES];
-    }
-    
-    RTCVideoTrack *videoTrack = [self.peerConnectionFactory videoTrackWithSource:videoSource trackId:[self videoTrackId]];
-    
-    return videoTrack;
+    #if !TARGET_IPHONE_SIMULATOR
+      RTCCameraVideoCapturer *capturer = [[RTCCameraVideoCapturer alloc] initWithDelegate:source];
+     // [_delegate appClient:self didCreateLocalCapturer:capturer];
+    #else
+    #if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
+      if (@available(iOS 10, *)) {
+        RTCFileVideoCapturer *fileCapturer = [[RTCFileVideoCapturer alloc] initWithDelegate:source];
+        [_delegate appClient:self didCreateLocalFileCapturer:fileCapturer];
+      }
+    #endif
+    #endif
+    [_delegate webRTCPeer:self didCreateLocalCapturer:capturer];
+    return [_peerConnectionFactory videoTrackWithSource:source trackId:kARDVideoTrackId];
 }
 
 - (NSString *)cameraDevice:(NBMCameraPosition)cameraPosition
@@ -590,6 +600,10 @@ didReceiveMessageWithBuffer:(RTCDataBuffer *)buffer {
     });
 }
 
+- (void)webRTCPeer:(NBMWebRTCPeer *)peer didCreateLocalCapturer:(RTCCameraVideoCapturer *) capturer {
+    
+}
+
 - (void)peerConnection:(RTCPeerConnection *)peerConnection
          didRemoveStream:(RTCMediaStream *)stream {
     NBMPeerConnection *connection = [self wrapperForConnection:peerConnection];
@@ -661,6 +675,11 @@ didReceiveMessageWithBuffer:(RTCDataBuffer *)buffer {
     didOpenDataChannel:(RTCDataChannel *)dataChannel {
 
 }
+
+- (void)peerConnection:(nonnull RTCPeerConnection *)peerConnection didRemoveIceCandidates:(nonnull NSArray<RTCIceCandidate *> *)candidates {
+    
+}
+
 
 #pragma mark - RTCSessionDescriptionDelegate
 
